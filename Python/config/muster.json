@@ -1,0 +1,17 @@
+{
+  "environment": [
+    {
+      "name": "itemize",
+      "vorlage": "absatz",
+      "KEY1": "liste"
+    }
+  ],
+  "command": [
+    {
+      "name": "item",
+      "vorlage": "item",
+      "KEY1": "- ",
+      "environment": ["itemize"]
+    }
+  ]
+}

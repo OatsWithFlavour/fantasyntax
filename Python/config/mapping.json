@@ -1,0 +1,6 @@
+{
+  "ZEILENSTART": "^",
+  "SPACE": "\\s+",
+  "ZEILENENDE": "$",
+  "LEERZEILE": "^\\s*$"
+}

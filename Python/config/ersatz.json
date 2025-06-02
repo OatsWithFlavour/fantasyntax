@@ -1,0 +1,16 @@
+{
+  "environment": [
+    {
+      "name": "itemize",
+      "vorlage": "latex_umgebung",
+      "VAL1": "itemize"
+    }
+  ],
+  "command": [
+    {
+      "name": "item",
+      "vorlage": "no_parameter",
+      "KEY1": "item"
+    }
+  ]
+}

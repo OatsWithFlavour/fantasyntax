@@ -1,0 +1,8 @@
+{
+  "environment": {
+    "absatz": "ZEILENSTART KEY1: SPACE ZEILENENDE #1 LEERZEILE"
+  },
+  "command": {
+    "item": "ZEILENSTART KEY1"
+  }
+}

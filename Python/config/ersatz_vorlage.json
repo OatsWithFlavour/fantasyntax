@@ -1,0 +1,8 @@
+{
+  "environment": {
+    "umgebung": "\\begin{VAL1} \n #1 \n \\end{VAL1}"
+  },
+  "command": {
+    "no_parameter": "\\VAL1"
+  }
+}
