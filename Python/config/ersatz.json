@@ -2,15 +2,145 @@
   "environment": [
     {
       "name": "itemize",
+      "vorlage": "latex_umgebung"
+    },
+    {
+      "name": "enumerate",
+      "vorlage": "latex_umgebung"
+    },
+    {
+      "name": "doc",
       "vorlage": "latex_umgebung",
-      "VAL1": "itemize"
+      "VAL1": "document"
+    },
+    {
+      "name": "inline",
+      "vorlage": "closed_environment",
+      "VAL1": "$"
+    },
+    {
+      "name": "equation",
+      "vorlage": "latex_umgebung"
+    },
+    {
+      "name": "spalten",
+      "vorlage": "latex_umgebung"
     }
+
   ],
   "command": [
     {
       "name": "item",
       "vorlage": "no_parameter",
-      "KEY1": "item"
+      "VAL1": "item "
+    },
+    {
+      "name": "documentclass",
+      "vorlage": "line_command",
+      "VAL1": "documentclass"
+    },
+    {
+      "name": "versuchstitel",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "praktikumstitel",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "autoren",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "studiengang",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "datum",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "section",
+      "vorlage": "line_command",
+      "VAL1": "section"
+    },
+    {
+      "name": "subsection",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "textbf",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "frac",
+      "vorlage": "double_parameter"
+    },
+    {
+      "name": "klammer_bruch",
+      "vorlage": "double_parameter",
+      "VAL1": "frac"
+    },
+    {
+      "name": "cdot",
+      "vorlage": "no_parameter",
+      "VAL1": "cdot "
+    },
+    {
+      "name": "potenz",
+      "vorlage": "potenz"
+    },
+    {
+      "name": "tiefgestellt",
+      "vorlage": "tiefgestellt"
+    },
+    {
+      "name": "plusminus",
+      "vorlage": "no_parameter"
+    },
+    {
+      "name": "sqrt",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "bar",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "approx",
+      "vorlage": "no_parameter"
+    },
+    {
+      "name": "rho",
+      "vorlage": "no_parameter"
+    },
+    {
+      "name": "pi",
+      "vorlage": "no_parameter"
+    },
+    {
+      "name": "Delta",
+      "vorlage": "no_parameter"
+    },
+    {
+      "name": "circ",
+      "vorlage": "circ"
+    },
+    {
+      "name": "anderespalte",
+      "vorlage": "no_parameter"
+    },
+    {
+      "name": "zeilentabelle",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "grafik",
+      "vorlage": "optional_parameter"
+    },
+    {
+      "name": "grafikpdf",
+      "vorlage": "optional_parameter"
     }
   ]
 }

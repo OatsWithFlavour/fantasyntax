@@ -1,0 +1,293 @@
+\documentclass{protokoll}
+
+\praktikumstitel{Grundpraktikum Physik}
+\versuchstitel{M10 „Federpendel“}
+\autoren{Hannes Honert, Alexander Kühn}
+\studiengang{TKS, EIT (DIPLOM)}
+\datum{8. Mai 2025}
+
+\begin{document}
+\section{Aufgabenstellung}
+1. Der Adiabatenexponent von Luft ist mit Hilfe
+eines Expansionsexperimentes nach 
+Cl\'{e}ment-Desormes zu bestimmen.
+\\
+2. Der Adiabatenexponent von Luf ist aus einem
+Schwingungsexperiment nach Rüchardt zu 
+bestimmen.
+
+\section{Theoretische Grundlagen}
+Der Zustand eines idealen Gases wird eindeutig
+durch das Volumen $V$ den Druck $p$ und die 
+Temperatur $T$ beschrieben:
+\gl{pV = nRT}
+mit der $n$ der Mohlzahl und 
+$R = 8.314 \ bruch{J}{mol K}$ der
+universellen Gaskonstante.
+
+Die Änderung der inneren Energie 
+$\bruch{dU}{dt}$ eines
+Systems wird durch Summe der Änderungen aus
+Wärme $\bruch{dQ}{dt}$ und
+am System verrichtete Arbeit $\bruch{dW}{dt}$
+erzeugt:
+\gl{\bruch{dU}{dt} = \bruch{dQ}{dt} + \bruch{dW}{dt},
+dU = dQ + dW}
+
+Bei adiabatischen Prozessen wird die am 
+System verrichtete Arbeite viel schneller 
+geändert als die Wärme sich ändert:
+\gl{dQ << dW}
+Deshalb die Annahme:
+\gl{dU = dW}
+
+Wird das Volumen bei gleichen Druck 
+verringert wird Arbeit am System verrichtet:
+\gl{dW = -pdV}
+
+
+
+Die innere Energie eines idealen Gases
+$U$ wird durch die spezifische
+Wärekapazität bei konstanten Druck $C_V$ die Mohlzahl 
+$n$ und durch die Temperatur $T$ bestimmt:
+\gl{U = nC_VT}
+für kleine Temperaturänderungen $dT$:
+\gl{dU = nC_VdT}
+
+Wird die innere Energie eines adiabatischen Prozesses mit der inneren Energie
+eines idealen Gases verglichen erhält man:
+\gl{dU = dW = -pdV = nC_VdT}
+Wird der Druck $p$ durch die Zustandsgleichung idealer Gase ersetzt:
+\gl{-\bruch{nRT}{V}dV = nC_VdT,
+-\bruch{R}{C_V}\bruch{1}{V}dV= \bruch{1}{T}dT,
+-\bruch{R}{C_V}ln(V) + C = ln(T),
+C = \bruch{R}{C_V}ln(V) + ln(T),
+e^C = V^\bruch{R}{C_V}T = const.
+}
+
+Aus den Grundgleichungen idealer Gase kann folgender abgeleitet werden:
+\gl{C_P = C_V + R, \kappa = \bruch{C_P}{C_V} = 1 + \bruch{R}{C_V}}
+
+So erhält man eine der Adiabatengleichungen mit dem Adiabatenexponenten $\kappa$:
+
+\gl{TV^{\kappa - 1} = const.}
+
+Analog können auch die anderen Adiabatengleichungen hergeleitet werden:
+
+\gl{pV^\kappa = const., T^\kappa p^{1 - \kappa} = const.}
+
+Der Adiabatenexponent $\kappa$ ist das Verhältnis der spezifischen
+Wärmekapazität bei konstanten Druch $C_P$ und der spezifischen  Wärmekapazität
+bei konstantem Volumen $C_V$:
+
+\gl{\kappa = \bruch{C_P}{C_V} = \bruch{f + 2}{f}}
+
+Mit $f$ ist die Anzahl der Freiheitsgrade des Moleküls. Einatomige Gase besitzen
+nur drei Freiheitsgrade, zweiatomige Gase besitzen fünf Freiheitsgrade.
+
+\section{Versuchsbeschreibung}
+
+In diesem Versuch wurde der Adiabatenexponent der Luft auf zwei unterschiedliche 
+Arten bestimmt:
+
+\begin{enumerate}
+    \item Mittels eines \textbf{Expansionsversuchs nach Clément-Desormes}, 
+    bei dem die Druckänderung nach adiabatischer Expansion und anschließender 
+    isochorer Erwärmung in einer luftgefüllten Glasflasche gemessen wurde.
+    \grafik{Aufbau Expansionsversuch}
+    \item Mithilfe eines \textbf{Schwingungsversuchs nach Rüchardt}, bei 
+    dem ein luftdicht beweglicher Kolben auf einem Luftpolster zu harmonischen 
+    Schwingungen angeregt wurde.
+    \grafik{Aufbau Schwingungsversuch}
+\end{enumerate}
+
+Ziel war es, aus den jeweiligen physikalischen Beziehungen 
+(lineare Regression Druckverhältnisse oder aus $T^2, V$) den Adiabatenexponenten 
+$\kappa$ der Luft zu berechnen.
+
+\section{Versuchsdurchführung}
+
+\subsection{Expansionsversuch}
+
+Zunächst wurde im Vorversuch die notwendige Wartezeit zur Erreichung des 
+Temperaturgleichgewichts ermittelt. Dazu wurde mithilfe einer Handpumpe ein
+Überdruck von ca. $98{,}4 \, \mathrm{mbar}$ in der Glasflasche erzeugt, der 
+Absperrhahn geschlossen und der Druck im $15 \, \mathrm{s}$-Takt über $5 \, 
+\mathrm{min}$ aufgezeichnet. Danach wurde das Tellerventil kurz geöffnet und 
+erneut $5 \, \mathrm{min}$ lang im selben Takt der Druck gemessen. Die 
+aufgenommenen Daten wurden mittels nichtlinearer Regression (Exponentialfunktion 
+mit Asymptote) im Programm \textit{PhysPract} ausgewertet. Daraus ergaben sich 
+die minimalen Wartezeiten:
+
+\begin{itemize}
+    \item $150 \, \mathrm{s}$ nach dem Aufpumpen
+    \item $100 \, \mathrm{s}$ nach dem Druckausgleich
+\end{itemize}
+
+Im eigentlichen Versuch wurde der Startüberdruck variiert
+10-100 mbar in $\approx 10\, \mathrm{mbar}$-Schritten.
+Für jeden Wert wurden der Gleichgewichtsdruck $p_1$ und der Enddruck $p_2$ nach 
+den oben bestimmten Wartezeiten gemessen.
+
+\subsection{Schwingungsversuch}
+
+Für den Rüchardt’schen Versuch wurde ein Kolben in einem Glaskolbenprober auf 
+definierte Höhen gebracht, sodass ein messbares Luftvolumen eingeschlossen war. 
+Durch Herausziehen und Loslassen wurde der Kolben zur Schwingung gebracht. Die 
+Schwingungsdauer für $n = 10$ Perioden wurde für die Volumina $20, 40, 60, 70, 
+90 \, \mathrm{ml}$ bestimmt.  
+Die Masse des Kolbens betrug $m = (125{,}94 \pm 0{,}02) \cdot 10^{-3} \, 
+\mathrm{kg}$, die Raumtemperatur lag bei $23{,}5\, ^\circ\mathrm{C}$ und der 
+Luftdruck bei $p_0 = (729{,}5 \pm 0{,}25)\, \mathrm{Torr} \approx (97258{,}67 
+\pm 33{,}35)\, \mathrm{Pa}$. Der Rohrdurchmesser war $d = (31{,}10 \pm 0{,}05) 
+\cdot 10^{-3}\, \mathrm{m}$.
+
+
+
+
+\section{Messwerte}
+
+\begin{spalten}
+
+\zeilentabelle{Vorversuch_1_Expansion.csv}
+\anderespalte
+\zeilentabelle{Vorversuch_2_Expansion.csv}
+
+\end{spalten}
+
+\zeilentabelle{Expansionsversuch.csv}
+\zeilentabelle{Schwingungsversuch.csv}
+
+
+
+
+\section{Auswertung und Ergebnis}
+
+\subsection{Expansionsversuch nach Clément-Desormes}
+\grafik[1]{Vorversuch 1 zum Expansionsversuch}
+\grafik[1]{Vorversuch 2 zum Expansionsversuch}
+\grafik[1]{Expansionsversuch}
+
+
+Die gemessenen Druckwerte $p_1$ und $p_2$ wurden im Programm \textit{PhysPract} 
+dargestellt und durch eine Ausgleichsgerade angepasst. Aus dem 
+Anstieg $S = 0{,}260$ ergibt sich mit der Formel
+
+$$
+\kappa = \frac{1}{1 - S}
+$$
+
+der Wert:
+
+$$
+\kappa = \frac{1}{1 - 0{,}260} = 1{,}351
+$$
+
+
+
+\subsection{Schwingungsversuch nach Rüchardt}
+\grafik[1]{Schwingungsversuch}
+
+Für fünf unterschiedliche Volumina wurde jeweils die Schwingungsdauer 
+$T$ für $n = 10$ Perioden gemessen. Aus den $T^2$-Werten wurde eine lineare 
+Regression $T^2 = f(V)$ durchgeführt. Der Regressionsanstieg beträgt:
+
+$$
+S = (64{,}19 \pm 1{,}74) \, \mathrm{s^2/m^3}
+$$
+
+Mit
+\begin{align*}
+m &= (125{,}94 \pm 0{,}02) \cdot 10^{-3} \, \mathrm{kg} \\
+d &= (31{,}10 \pm 0{,}05) \cdot 10^{-3} \, \mathrm{m} \\
+p_0 &= (97258{,}67 \pm 33{,}35) \, \mathrm{Pa}
+\end{align*}
+
+und der Formel
+
+$$
+\kappa = \frac{64 \cdot m}{S \cdot p_0 \cdot d^4}
+$$
+
+ergibt sich:
+
+$$
+\kappa = 1{,}380
+$$
+
+Die kombinierte relative Unsicherheit ergibt sich aus:
+
+$$
+\frac{\Delta \kappa}{\kappa} = \left| \frac{\Delta m}{m} \right| + 
+\left| \frac{\Delta S}{S} \right| + \left| \frac{\Delta p_0}{p_0} \right| + 
+4 \cdot \left| \frac{\Delta d}{d} \right| \approx 0{,}0340
+$$
+
+Dabei gelten:
+
+\begin{align*}
+\frac{\Delta m}{m} &= \frac{0{,}00002 \, \mathrm{kg}}{0{,}12594 \, \mathrm{kg}} \approx 0{,}000159 \\
+\frac{\Delta S}{S} &= \frac{1{,}74 \, \mathrm{s^2/m^3}}{64{,}19 \, \mathrm{s^2/m^3}} \approx 0{,}0271 \\
+\frac{\Delta p_0}{p_0} &= \frac{33{,}35 \, \mathrm{Pa}}{97258{,}67 \, \mathrm{Pa}} \approx 0{,}000343 \\
+4 \cdot \frac{\Delta d}{d} &= 4 \cdot \frac{0{,}00005 \, \mathrm{m}}{0{,}03110 \, \mathrm{m}} \approx 0{,}00643
+\end{align*}
+
+Daraus ergibt sich:
+
+$$
+\frac{\Delta \kappa}{\kappa} \approx 0{,}000159 + 0{,}0271 + 0{,}000343 + 0{,}00643 = 0{,}0340
+$$
+
+Die absolute Unsicherheit von $\kappa$ beträgt:
+
+$$
+\Delta \kappa = \kappa \cdot \frac{\Delta \kappa}{\kappa} = 1{,}380 \cdot 0{,}0340 \approx 0{,}047
+$$
+
+Somit ergibt sich als Endergebnis:
+
+$$
+\boxed{\kappa = (1{,}380 \pm 0{,}047)}
+$$
+
+
+
+
+\section{Fehlerdiskussion}
+
+Im Expansionsversuch wurde der Adiabatenexponent zu $\kappa = 1{,}351$ bestimmt. 
+Die Differenz zum theoretischen Wert von $\kappa_{\text{theo}} = 1{,}40$ 
+(für trockene Luft als zweiatomiges Gas) ist durch 
+\textbf{systematische Effekte} erklärbar. Besonders hervorzuheben 
+ist der Einfluss von \textbf{Wasserdampf}, einem dreiatomigen Molekül mit 
+sechs Freiheitsgraden, was den Wert in Richtung $\kappa \approx 1{,}33$ senkt. 
+Der gemessene Wert liegt somit plausibel im Übergangsbereich zwischen trockener 
+und feuchter Luft.
+
+Im Schwingungsversuch konnte mit höherer Genauigkeit ein Wert von
+
+$$
+\kappa = (1{,}380 \pm 0{,}047)
+$$
+
+bestimmt werden, der den Literaturwert von $\kappa = 1{,}40$ innerhalb der 
+Unsicherheit einschließt. Die \textbf{größten Unsicherheiten} ergaben sich 
+durch die Regressionsberechnung der Ausgleichsgeraden sowie durch die vierte 
+Potenz des Rohrdurchmessers in der Formel. Die Schwingungsdauer wurde jedoch 
+mit hoher Präzision gemessen, was den relativ kleinen Fehler erklärt.
+
+Zusätzlich zu den statistisch erfassten Unsicherheiten könnten 
+\textbf{systematische Fehler} wie Reibung im Rohr, kleine Undichtigkeiten 
+oder Ablesefehler beim Volumen auftreten, die sich jedoch nur geringfügig auf 
+das Ergebnis auswirken sollten.
+
+
+
+
+\section{Anhang}
+
+
+
+\end{document}
+%

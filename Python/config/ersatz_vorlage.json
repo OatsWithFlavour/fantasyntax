@@ -1,8 +1,15 @@
 {
   "environment": {
-    "umgebung": "\\begin{VAL1} \n #1 \n \\end{VAL1}"
+    "latex_umgebung": "\\\\begin{ VAL1 } \\n #1 \\n \\\\end{ VAL1 } \\n\\n",
+    "closed_environment": "VAL1 #1 VAL1"
   },
   "command": {
-    "no_parameter": "\\VAL1"
+    "no_parameter": "\\\\ VAL1 ",
+    "double_parameter": "\\\\ VAL1 { #1 } { #2 }",
+    "optional_parameter": "\\\\ VAL1 [ #2 ] { #1 }",
+    "line_command": "\\\\ VAL1 { #1 }",
+    "potenz": "^{ #1 }",
+    "tiefgestellt": "_{ #1 }",
+    "circ": "^\\\\ VAL1 "
   }
 }

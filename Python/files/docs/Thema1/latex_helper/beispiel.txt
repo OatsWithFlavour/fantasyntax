@@ -1,0 +1,56 @@
+klasse: protokoll
+
+praktikumstitel: Grundpraktikum Physik
+versuchstitel: M2 Schwerebeschleunigung
+autoren: Hannes Honert, Alexander Kühn
+studiengang: TKS, EIT (DIPLOM)
+datum: 27. Mai 2025
+
+doc:
+
+kap: Einleitung
+
+unterkap: Theorie
+
+lsakdjhflksajdflsakjdfsalöfksaölfj
+blablabla
+
+sadnasdg **blablabla** ölasdkfjöasldkjf
+noch was 
+
+öhdsjglöksdfjölskdjfg
+blablabla
+
+$$a/b$$
+$$(a^(e + 2) + b * 2)/( asldkfj )$$
+$$Hallo 2^(3 + 4) hallo Cgrad ca. 10 U_(Spannung) I^(Widerstandd) wurzel(1 - U_(Spannung))$$
+$$4 +- 5$$
+
+aösdlkfjsaöldkf $ a/b $
+asödlfkjsldkjf
+a/b 
+
+liste:  
+- Apfel
+- Banane
+- Kirsche
+
+
+Zwischentext
+
+aufzählung:  
+- Eins
+- Zwei
+- Drei
+
+
+1. Spalte:
+Das ist die erste Spalte
+
+2. Spalte:
+Das ist die zweite Spalte
+
+zeilentabelle: messdaten.csv
+
+
+Ende

@@ -1,6 +1,15 @@
 {
   "ZEILENSTART": "^",
   "SPACE": "\\s+",
+  "SPACE+0": "\\s*",
   "ZEILENENDE": "$",
-  "LEERZEILE": "^\\s*$"
+  "LEERZEILE": "^\\s*$",
+  "DOPPELLEERZEILE": "^\\s*$\\n^\\s*$",
+  "#REST": "\\n(.*)",
+  "#BEZEICHNER": "(\\w+)",
+  "#OHNE_KLAMMER": "([^()]+)",
+  "KLAMMER_AUF": "\\(",
+  "KLAMMER_ZU": "\\)",
+  "DACH": "\\^",
+  "PLUSMINUS": "\\+-"
 }

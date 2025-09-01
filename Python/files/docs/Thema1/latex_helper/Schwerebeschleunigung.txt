@@ -1,0 +1,305 @@
+klasse: protokoll
+
+praktikumstitel: Grundpraktikum Physik
+versuchstitel: M2 Schwerebeschleunigung
+autoren: Hannes Honert, Alexander Kühn
+studiengang: TKS, EIT (DIPLOM)
+datum: 27. Mai 2025
+
+doc:
+
+kap: Aufgabenstellung
+
+
+aufzählung:
+- Die Schwerebeschleunigung der Erde ist aus dem freien Fall 
+einer Stahlkugel zu bestimmen. Der Einfluss der Luftreibung 
+ist abzuschätzen
+- Die Schwerebeschleunigung ist weiterhin mithilfe einer Atwoodschen 
+Fallmaschine zu bestimmen. Effektive Masse und Lagerreibung der 
+Umlenkrolle sind anzugeben.
+
+
+kap: Theoretische Grundlagen
+
+Die Erdbeschleunigung $g$ liegt nach Tafelwerk bei $g = 9.80665 (m)/(s^2)$.
+
+unterkap: Erdbeschleunigung ohne Luftreibung:
+
+
+Die Erdbeschleunigung $g$ wird bei Vernachlässigung der Luftreibung wie folgt definiert:
+
+$$ g = 2s/t^2 $$
+
+
+wobei $s$ der Weg und $t$ die Fallzeit ist.
+
+
+unterkap: Erdbeschleunigung mit Luftreibung:
+
+
+Der Weg des freien Falls mit Einfluss der Luftreibung 
+wird gemäß der Versuchsanleitung so definiert:
+
+$$ s(t) = 1/2 g t^2 - 1/12 c g^2 t^4 $$
+
+umgestellt nach $2s(t)$:
+
+$$ 2s = g t^2 (1 - 1/6 c g t^2) $$
+
+nach $g$ durch Nullstellen berechnen:
+
+$$ 0 = 1/2 g t^2 - 1/12 c g^2 t^4 - s $$
+$$ 0 = g^2 - (6)/(ct^2) g + (12s)/(ct^4) $$
+$$ g_1/2 = 3/ct^2 plusminus (wurzel(9 - 12cs))/(ct^2) $$
+der positive Wert:
+
+$$ g = (3 + wurzel(9 - 12cs))/(ct^2) $$
+
+Eine Formel für die Erdbeschleunigung $g$ mit dem Einfluss der Luftreibung entsteht.
+
+Dabei wird die Konstante $c$ wird bestimmt aus:
+
+$$c = (3 rho_L)/(20 rho_K r)$$
+
+wobei $rho_L$ die Luftdichte, $rho_K$ die Dichte der Kugel 
+und $r$ der Radius der Kugel ist.
+
+Die Luftdichte $rho_L$ wird wie folgt bestimmt:
+
+Gegeben ist die Dichte der Luft unter Normbedingungen: 
+$ rho_L (p_0, T_0) = 1.2928 kg/m^3, p_0 = 101.3 kPa, 
+T_0 = 0 C grad = 273.15 K$
+
+Die thermische Zustandsgleichung idealer Gase lautet wie folgt:
+
+$$nRT = pV$$
+
+mit $n$ der Stoffmenge, $R$ der universellen Gaskonstante, 
+$T$ der Temperatur, $p$ den Druck und $V$ den Volumen.
+
+Die Stoffmenge ist definiert als:
+
+$$ n = m/M $$
+
+mit $m$ der Masse und $M$ der molaren Masse.
+
+$M$ und $R$ sind konstant. $M$ ist konstant, da es sich 
+um die gleiche Luft handelt. Setzt man die Gleichungen 
+in einander ein und stellt nach den Konstanten um erhält man:
+
+$$ R/M = pV/mT $$
+
+wobei $m/V = rho$ die Dichte darstellt:
+
+$$ M/R = (rho T)/(p) = konst.$$
+
+Setzt man nun für $ rho = rho_L = 1.2928 (kg)/(m^3), 
+T = T_0 = 0 C grad = 273.15 K $ und für $ p = p_0 = 101.3 kPa $
+erhält man:
+
+$$M/R = (rho_L * T_0)/(p_0) = (1.2928 (kg)/(m^3) * 273.15 K)/(101.3 kPa)
+= 3.49 * 10^-3 (Ks^2)/(m^2) $$
+
+Um den aktuellen Luftdruck zu messen, wird nach $rho$ umgestellt:
+
+$$ rho = M/R p/T $$
+
+hier:
+
+$$ rho_(Luft, aktuell) = 3.49 * 10^-3 (Ks^2)/(m^2) * 
+p_(Luft, aktuell)/T_(Luft, aktuell) $$
+
+Diese Formel kommt im Versuch zum freien Fall zum Einsatz
+
+unterkap: Atwoodsche Fallmaschine
+
+Die Beschleunigung der Massen ist bei der Atwoodschen Fallmaschine 
+wie folgt reduziert:
+
+$$ a = (m_Z)/(2m + m_Z) g $$
+
+wobei $m_Z$ die Zusatzmasse, $ m $ eine der beiden Massen und 
+$g$ die Erdbeschleunigung darstellt. 
+Vorteil zur Messung der Erdbeschleunigung $g$ sind die höheren
+Fallzeiten und die damit geringere Luftreibung.
+So lautet der Weg $s$ abhänigig von der Beschleunigung $a$
+$$ s = a/2 t^2 $$
+
+kap: Versuchsbeschreibung
+
+
+liste:
+- für beide Versuchsteile steht am Versuchsplatz eine 
+intuitiv zu bedienende elektronische Stoppuhr
+- die Stoppuhr hat zwei Betriebsarten: freier Fall ("FF") 
+und Atwoodsche Fallmaschine ("FM")
+- Rücksetzen nur möglich: Fallkörper Startkontakt geschlossen 
+hat und bei der Fallmaschine auch der Stoppkontakt geschlossen ist.
+- zur Auswertung Verwendung vom Praktikumsprogramm PhysPract
+
+
+unterkap: Freier Fall
+
+
+liste:
+- Freifallapperat: Kugel fällt von einer einstellbaren Fallhöhe
+- Freifallapparat: Fallhöhe einstellbar zwischen $5cm$  und $90cm$
+- Fallhöhe abgelesen an der oberen Fläche des Kugelhalters(Pfeilmarkierung)
+
+
+unterkap: Atwoodsche Fallmaschine
+
+liste:
+- zwei gleiche Massen sind über eine Umlenkrolle und Faden mit einander
+verbunden
+- eine Zusatzmasse an an eine der beiden Massen bewirkt eine Beschleunigung
+- die Beschleunigung ist deutlich gegeben über der Erdbeschleunigung reduziert
+- Messstrecke fest auf $s = 2m $ eingestellt
+- $m_Z,1$ bis $m_Z,11$ sind als Zusatzmassen vorhanden
+- aufgrund zufallsvertzeilter äußerer Störfaktoren ist Messung 
+mindestens 5 mal zu wiederholen.
+- Bremse lösen bevor die Masse an ihre Ausgangsposition bewegt wird
+
+
+kap: Versuchsdurchführung
+
+
+unterkap: Bestimmung der Erdbeschleunigung $g$ bei Vernachlässigung der Luftreibung:
+
+
+aufzählung:
+- Stoppuhr auf Betreibsart freier Fall ("FF") stellen
+- Reproduzierbarkeit der Zeitmessung bei gleichbleibender Fallhöhe prüfen
+- Fallzeit $t$ für $ s = 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 
+65, 70, 75, 80, 85, 90 cm $ einmal messen
+- aus theoretischen Grundlagen bei Vernachlässigung der Luftreibung:
+$$ 2s/t^2 = g $$
+- $2s$ und $t^2$ für die Messwerte in Excel erstellen
+- die Tabelle abspeichern
+- plotten von x-Achse $t^2$ und y-Achse $2s$ als Ausgleichsgerade
+- Anstieg entspricht der Erdbeschleunigung $g$
+- g notieren und Plot abspeichern
+
+
+unterkap: Bestimmung von Erdbeschleunigung $g$ mit Einfluss der Luftreibung:
+
+
+aufzählung:
+- Berechnung von g für für $s > 40cm$ also $s = 45, 50, 55, 60, 65, 70, 75, 80, 85, 
+90cm $
+- aus theoretischen Grundlagen:
+$$c = (3 rho_L)/(20 rho_K r)$$
+- für $ rho_L $ wird die aktuelle Temperatur gemessen und in Kelvin notiert.
+Desweiteren wird der aktuelle Luftdruck gemessen und in Pascal notiert.
+- mit der Formel $ rho = 3.49 * 10^-3 (Ks^2)/(m^2) * 
+p/T $ wird der aktuelle Luftdruck berechnet
+und notiert in der Einheit $(kg)/(m^3)$
+
+- Dichte der Stahlkugel ist hier $rho_K = 7.796 * 10^3 (kg)/(m^3)$
+- Der Radius der Stahlkugel ist hier $ r_k = 8 * 10^-3 m $
+- Berechne und notiere c 
+- öffne Excel und nutze die bereits erstelle Tabelle
+- Brechne mit $ g = (3 + wurzel(9 - 12cs))/(ct^2) $ die Erdbeschleunigungen $g$ für alle $s > 40cm$.
+- Berechne die g mit der Excel-Tabellenkalkulation und speichere die Tabelle.
+- Vergleichen der Erdbeschleunigung $g$ unter Vernachlässigung und Berücksichtigung der Luftreibung.
+- $g_ohne$ sei der Wert ohne Luftwiderstand und $g_mit$ sei der Wert mit Einfluss des Luftwiderstandes.
+- absoluter Unterschied: $ delta g = g_ohne - g_mit $
+- relativer Unterschied in %: $ (g_ohne - g_mit)/(g_ohne) * 100 $
+- absolute und relative Unterschiede notieren
+
+
+aufzählung:
+- Stoppuhr auf Betreibsart Atwoodsche Fallmaschine ("FM") stellen
+- für jede der 11 Zusatzmassen die Messung 5 mal wiederholen
+- Wichtig: Bremse vor dem Rücksetzen auf die Ausgangsposition lösen
+- Messwerte mit Excel mitteln
+- aus Fallhöhe $s = 2m$ und den gemittelten $avg(t)$ mithilfe von $ a = 2s/t^2 $
+$a_1$ bis $a_11$ bestimmen
+- nutze dazu wieder Excel
+- Bestimmung der Zusatzmassen $m_Z$
+- notiere Wägesatz (A oder B)
+- Masse der beiden Fallkörper mit Faden: $2m = (370.00 plusminus 0.02)g$ 
+
+Ermittlung der effektiven Rollmasse $m_R,eff$:
+
+aufzählung:
+- Versuch wird nach Abb.3 aufgebaut
+- eine baugleiche Umlenkrolle, Spiralfeder und verschiedene Anhängemassen $m_P$
+stehen zur Verfügung
+- Messung von Schwinugungsdauer $T$ über 10 bis 50 Schwingungsperioden (wähle eine)
+- notiere Schwingungsperioden
+- Anhängemassen varieren $m_P$ für $30, 50, 70, 90, 110, 130, 150g$
+- bestimme mit Excel $T^2$
+- eine Ausgleichsgerade mit den Programm Praktikumsprogramm PhysPract zeichnen
+- Y-Achse $T^2$ und X-Achse $m_p$
+- sinnvolle Einheiten für die Achsenbeschriftung wählen
+- Dahinter stehende Formel:
+$$ T^2 = (4pi^2)/D(m_P + m_R,eff + m_F/3) $$
+- wobei $m_P$ die jeweiligen Anhängemassen, $m_R,eff$ die effektive Rollreibung und $m_F$ die Masse der Feder ist.
+- der Term $(4pi^2)/D (m_R,eff + m_F/3)$ beschreibt den Schnittpunkt mit der Y-Achse also:
+$$ y(x=0) = (4pi^2)/D (m_R,eff + m_F/3)$$
+umgestellt nach $m_R,eff$:
+$$ m_R,eff = (D y(x=0))/(4pi^2) - m_F/3 $$
+- $y(x=0)$ aus der Ausgleichsgerade bestimmen, $m_F$ abwiegen und $D$ die Federkonstante bestimmen.
+- mit der letzen Formel die effektive Rollmasse $m_R,eff$ bestimmen
+- Plott abspeichern 
+
+Erdbeschleunigung $g$ und Reibungskraft $F_R$ bestimmen
+
+aufzählung:
+- $m_M = 2m + m_R,eff$ bestimmen
+- mit Excel aus den Zusatzmassen $m_Z$ und gemessenen Beschleunigungen:
+- wegen $m_Zg - F_R = (m_M + m_Z)a$ $(m_M + m_Z)a$ über die $m_z$ auftragen
+- Ausgleichsgerade plotten
+- die gesuchten Größen mit Anstieg und Absolutglied
+
+
+kap: Messwerte
+
+kap: Auswertung und Ergebnis
+
+Die mit den beiden unterschiedlichen Methoden gefundenen Werte für die Erdbeschleunigung sind,
+unter Berücksichtigung der berechneten Standardunsicherheiten, mit Tabellenwerten zu vergleichen,
+mögliche Abweichungen sind zu diskutieren.
+
+
+
+kap: Fehlerdiskussion
+
+
+
+liste:
+- Punkt 1
+- Punkt 2
+- Punkt 3
+
+Display:
+$$kappa$$
+$$a/b$$
+
+klasdfjlsd
+lskdfjlöska
+dsölkfjasdfasöldkfjas
+ökljsdfgk
+
+kap: eine Idee 
+unterkap: eine kleine Idee
+aslkdfa
+sdlöfkjgsdlökf
+a/b
+
+ölkdsaflaskdjf
+södlkfjasöldkfjsöalkdjfsalökdfjsaölkdfjslökdjfsaölkdjfslakdjf
+äölkasdjjölkasdjfölksajdfölksadjflkösajdf
+sadölkjffhasldkjfhsakdjfhsalökdfjjslkjdföalsk
+
+$kappa$ und $a/b$ und $(a + b)/(c + d)$
+
+$$kappa$$
+$\frac{(x+1)/(x-1)}{2}$
+
+
+liste:
+- Milch
+- Zucker

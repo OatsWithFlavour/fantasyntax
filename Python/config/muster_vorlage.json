@@ -1,8 +1,20 @@
 {
   "environment": {
-    "absatz": "ZEILENSTART KEY1: SPACE ZEILENENDE #1 LEERZEILE"
+    "absatz": "ZEILENSTART KEY1 : SPACE+0 ZEILENENDE #1 DOPPELLEERZEILE",
+    "doc": "ZEILENSTART doc: SPACE+0 ZEILENENDE #REST",
+    "closed_environment": "KEY1 #1 KEY1"
   },
   "command": {
-    "item": "ZEILENSTART KEY1"
+    "item": "ZEILENSTART KEY1 SPACE",
+    "line_command": "ZEILENSTART KEY1 : SPACE #1 ZEILENENDE",
+    "empty_line_command": "ZEILENSTART KEY1 :",
+    "closed_command": "KEY1 #1 KEY1",
+    "einfacher_bruch": "#BEZEICHNER / #BEZEICHNER",
+    "klammer_bruch": "KLAMMER_AUF #OHNE_KLAMMER KLAMMER_ZU / KLAMMER_AUF #OHNE_KLAMMER KLAMMER_ZU",
+    "formelzeichen": "KEY1",
+    "potenz": "DACH KLAMMER_AUF #OHNE_KLAMMER KLAMMER_ZU",
+    "klammer_command": "KEY1 KLAMMER_AUF #OHNE_KLAMMER KLAMMER_ZU",
+    "plusminus": "PLUSMINUS",
+    "double_line": "ZEILENSTART KEY1 : SPACE #1 ; SPACE #2 ZEILENENDE"
   }
 }

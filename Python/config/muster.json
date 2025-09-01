@@ -4,14 +4,170 @@
       "name": "itemize",
       "vorlage": "absatz",
       "KEY1": "liste"
+    },
+    {
+      "name": "enumerate",
+      "vorlage": "absatz",
+      "KEY1": "aufzählung"
+    },
+    {
+      "name": "doc",
+      "vorlage": "doc"
+    },
+    {
+      "name": "inline",
+      "vorlage": "closed_environment",
+      "KEY1": "$"
+    },
+    {
+      "name": "equation",
+      "vorlage": "closed_environment",
+      "KEY1": "$$"
+    },
+    {
+      "name": "spalten",
+      "vorlage": "absatz",
+      "KEY1": "1. Spalte"
     }
   ],
   "command": [
     {
       "name": "item",
       "vorlage": "item",
-      "KEY1": "- ",
-      "environment": ["itemize"]
+      "KEY1": "-",
+      "environment": ["itemize", "enumerate"]
+    },
+    {
+      "name": "documentclass",
+      "vorlage": "line_command",
+      "KEY1": "klasse"
+    },
+    {
+      "name": "praktikumstitel",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "versuchstitel",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "autoren",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "studiengang",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "datum",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "section",
+      "vorlage": "line_command",
+      "KEY1": "kap"
+    },
+    {
+      "name": "subsection",
+      "vorlage": "line_command",
+      "KEY1": "unterkap"
+    },
+    {
+      "name": "textbf",
+      "vorlage": "closed_command",
+      "KEY1": "**"
+    },
+    {
+      "name": "frac",
+      "vorlage": "einfacher_bruch",
+      "environment": ["inline", "equation"]
+    },
+    {
+      "name": "klammer_bruch",
+      "vorlage": "klammer_bruch",
+      "environment": ["inline", "equation"]
+    },
+    {
+      "name": "cdot",
+      "vorlage": "formelzeichen",
+      "environment": ["inline", "equation"],
+      "KEY1": " * "
+    },
+    {
+      "name": "potenz",
+      "vorlage": "potenz",
+      "environment": ["inline", "equation"]
+    },
+    {
+      "name": "tiefgestellt",
+      "vorlage": "klammer_command",
+      "environment": ["inline", "equation"],
+      "KEY1": "_"
+    },
+    {
+      "name": "plusminus",
+      "vorlage": "plusminus",
+      "environment": ["inline", "equation"]
+    },
+    {
+      "name": "sqrt",
+      "vorlage": "klammer_command",
+      "environment": ["inline", "equation"],
+      "KEY1": "wurzel"
+    },
+    {
+      "name": "bar",
+      "vorlage": "klammer_command",
+      "environment": ["inline", "equation"],
+      "KEY1": "avg"
+    },
+    {
+      "name": "approx",
+      "vorlage": "formelzeichen",
+      "environment": ["inline", "equation"],
+      "KEY1": "ca."
+    },
+    {
+      "name": "rho",
+      "vorlage": "formelzeichen",
+      "environment": ["inline", "equation"]
+    },
+    {
+      "name": "pi",
+      "vorlage": "formelzeichen",
+      "environment": ["inline", "equation"]    
+    },
+    {
+      "name": "Delta",
+      "vorlage": "formelzeichen",
+      "environment": ["inline", "equation"]
+    },
+    {
+      "name": "circ",
+      "vorlage": "formelzeichen",
+      "environment": ["inline", "equation"],
+      "KEY1": "grad"
+    },
+    {
+      "name": "anderespalte",
+      "vorlage": "empty_line_command",
+      "KEY1": "2. Spalte",
+      "environment": ["spalten"]
+    },
+    {
+      "name": "zeilentabelle",
+      "vorlage": "line_command"
+    },
+    {
+      "name": "grafik",
+      "vorlage": "double_line"
+    },
+    {
+      "name": "grafikpdf",
+      "vorlage": "double_line"
     }
+
+
+
   ]
 }

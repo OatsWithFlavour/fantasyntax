@@ -1,30 +1,25 @@
 import re
 
-
-def ersetze_mapping_tokens(schablone: str, mapping: dict) -> str:
-    """Ersetzt alle Tokens wie ZEILENSTART, SPACE, ... durch ihre Regex-Entsprechung."""
-    for token, regex in mapping.items():
-        schablone = schablone.replace(token, regex)
-    return schablone
+def ersetze_mapping_tokens(tokens: list[str], mapping: dict) -> list[str]:
+    """Ersetzt alle Mapping-Tokens wie ZEILENSTART, SPACE, ... durch ihre Regex-Entsprechung."""
+    return [mapping.get(token, token) for token in tokens]
 
 
-def ersetze_keys(schablone: str, eintrag: dict) -> str:
-    """Ersetzt alle Schlüssel wie KEY1, KEY2, ... durch deren konkrete Werte (escaped)."""
-    for key, value in eintrag.items():
-        if key.startswith("KEY"):
-            schablone = schablone.replace(key, re.escape(value))
-    return schablone
+def ersetze_keys(tokens: list[str], eintrag: dict) -> list[str]:
+    """Ersetzt alle Tokens wie KEY1, KEY2, ... durch re.escape() ihrer Werte."""
+    def ersetze_token(token):
+        if re.fullmatch(r"KEY\d+", token):
+            wert = eintrag.get(token, eintrag.get("name", ""))
+            return re.escape(wert)
+        return token
+
+    return [ersetze_token(token) for token in tokens]
 
 
-def ersetze_platzhalter(schablone: str) -> str:
-    """Ersetzt Platzhalter #1, #2, ... durch Regex-Gruppen, die auch mehrzeilig matchen."""
-    return re.sub(r'#\d+', r'(.*?)', schablone)
 
-
-def bereinige_regex(schablone: str) -> str:
-    """Entfernt überflüssige Leerzeichen aus dem Regex."""
-    return schablone.replace(" ", "")
-
+def ersetze_platzhalter(tokens: list[str]) -> list[str]:
+    """Ersetzt Platzhalter #1, #2, ... durch Regex-Gruppen (.*?)."""
+    return [re.sub(r'#\d+', r'(.*?)', token) for token in tokens]
 
 def generiere_regex(vorlagen: dict, mapping: dict, musterdaten: dict) -> dict:
     """
@@ -40,12 +35,15 @@ def generiere_regex(vorlagen: dict, mapping: dict, musterdaten: dict) -> dict:
             if not name or not vorlage_name:
                 continue
 
-            schablone = vorlagen[typ][vorlage_name]
-            schablone = bereinige_regex(schablone)
-            schablone = ersetze_mapping_tokens(schablone, mapping)
-            schablone = ersetze_keys(schablone, eintrag)
-            regex = ersetze_platzhalter(schablone)
+            # Schritt 1: Vorlage in Tokenliste zerlegen
+            tokens = vorlagen[typ][vorlage_name].split()
 
-            muster_dict[name] = regex
+            # Schritt 2: Verarbeitungsschritte
+            tokens = ersetze_mapping_tokens(tokens, mapping)
+            tokens = ersetze_keys(tokens, eintrag)
+            tokens = ersetze_platzhalter(tokens)
+
+            # Schritt 3: Rückgabe als zusammengebauter Regex (ohne Leerzeichen dazwischen)
+            muster_dict[name] = ''.join(tokens)
 
     return muster_dict
